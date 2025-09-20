@@ -5,10 +5,10 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-
 file(GLOB PE_BLISS_SOURCES "src/pe_bliss/*.cpp")
 
 add_library(PeBliss STATIC ${PE_BLISS_SOURCES})
+add_library(PeBliss::PeBliss ALIAS PeBliss)
 
 target_include_directories(PeBliss PUBLIC include)
 
